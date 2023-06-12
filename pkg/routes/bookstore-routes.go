@@ -5,7 +5,7 @@ import(
 	"github.com/hamidr-source/go-bookstore/pkg/controllers"
 )
 
-var RegisterBookStoreroutes = func(router *mux.Router){
+var RegisterBookStoreRoutes = func(router *mux.Router){
 	router.HndleFunc("/book/", controllers.CreateBook).Methods("POST")
 	router.HandleFunc("/book/", controllers.GetBook).Methods("GET")
 	router.HandleFunc("/book/{bookId}", controllers.GetBookById).Methods("GET")
